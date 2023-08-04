@@ -34,21 +34,38 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckTcpPort.cs" />
+    <Compile Include="Ftp.cs" />
+    <Compile Include="MulticastReceive.cs" />
+    <Compile Include="MulticastSend.cs" />
     <Compile Include="SocketAsyncServer.cs" />
     <Compile Include="SocketClient.cs" />
+    <Compile Include="SocketHttpConnect.cs" />
+    <Compile Include="SocketMulticastReceiver.cs" />
+    <Compile Include="SocketMulticastSender.cs" />
     <Compile Include="SocketServer.cs" />
+    <Compile Include="SshCli.cs" />
     <Compile Include="TcpClient.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TcpScreenCaptureClient.cs" />
+    <Compile Include="TcpScreenCaptureServer.cs" />
     <Compile Include="TcpServer.cs" />
     <Compile Include="TcpServerAsync.cs" />
     <Compile Include="UdpClient.cs" />
     <Compile Include="UdpServer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Renci.SshNet, Version=2020.0.2.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.2\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
